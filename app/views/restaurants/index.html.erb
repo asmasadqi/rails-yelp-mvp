@@ -5,10 +5,8 @@
   <% @restaurants.each do |restaurant| %>
     <li>
       <div>
-        <h3><%= restaurant.name %></h3>
-        <p><%= restaurant.address %></p>
-        <p><%= restaurant.phone_number %></p>
-        <p><%= restaurant.category %></p>
+        <%= render restaurant %>
+        <%= link_to "Show this Restaurant", restaurant_path(restaurant) %>
       </div>
     </li>
   <% end %>
